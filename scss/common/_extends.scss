@@ -1,0 +1,7 @@
+//components, code snippets that are repeated
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//@extend %flex-center
