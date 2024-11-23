@@ -1,0 +1,101 @@
+.header {
+  position: relative;
+  height: 700px;
+  &__inner {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__img {
+    z-index: -1000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  &__content {
+    width: 543px;
+  }
+  &__title {
+    color: rgb(49, 49, 49);
+    font-family: Merriweather;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  &__title-s1 {
+    padding-left: 91px;
+  }
+  &__title-s2 {
+    padding-left: 35px;
+  }
+  &__text {
+    color: rgb(49, 49, 49);
+    font-family: Golos Text;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  &__btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__btn-link {
+    width: 263px;
+    height: 72px;
+    padding: 15px 40px;
+    font-family: Golos Text;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0px;
+    text-align: center;
+    border-radius: 66px;
+    overflow: hidden;
+  }
+  &__btn-link.btn-left {
+    color: #ffffff;
+    background: black;
+    transition: 0.2s linear;
+    &:hover {
+      color: rgb(31, 31, 31);
+      background: rgb(251, 206, 81);
+    }
+  }
+  &__btn-link.btn-right {
+    color: rgb(31, 31, 31);
+    background: transparent;
+    transition: 0.2s linear;
+    border: 2px solid rgb(31, 31, 31);
+    &:hover {
+      color: #ffffff;
+      background: rgb(31, 31, 31);
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  margin-bottom: 62px;
+  &__img {
+    width: 92px;
+    height: 31px;
+  }
+  &__text {
+    font-size: 16px;
+    font-family: 'Golos Text';
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 8px;
+  }
+}

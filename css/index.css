@@ -1,14 +1,13 @@
-@charset "UTF-8";
-@import url("header.css");
-/*Обнуление*/
 * {
   padding: 0;
-  margin: 0; /* border: 0; */
+  margin: 0;
 }
 
 *,
 *:before,
 *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -87,8 +86,363 @@ h6 {
   font-weight: inherit;
 }
 
-/*--------------------*/
+.transformation__item:nth-child(7)::after, .transformation__item:nth-child(6)::after, .transformation__item:nth-child(5)::after, .transformation__item:nth-child(4)::after, .transformation__item:nth-child(3)::after, .transformation__item:nth-child(2)::after, .transformation__item:nth-child(1)::after {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .container {
   max-width: 1222px;
   margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  height: 700px;
+}
+.header__inner {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.header__img {
+  z-index: -1000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.header__content {
+  width: 543px;
+}
+.header__title {
+  color: rgb(49, 49, 49);
+  font-family: Merriweather;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 0px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.header__title-s1 {
+  padding-left: 91px;
+}
+.header__title-s2 {
+  padding-left: 35px;
+}
+.header__text {
+  color: rgb(49, 49, 49);
+  font-family: Golos Text;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.header__btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__btn-link {
+  width: 263px;
+  height: 72px;
+  padding: 15px 40px;
+  font-family: Golos Text;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0px;
+  text-align: center;
+  border-radius: 66px;
+  overflow: hidden;
+}
+.header__btn-link.btn-left {
+  color: #ffffff;
+  background: black;
+  transition: 0.2s linear;
+}
+.header__btn-link.btn-left:hover {
+  color: rgb(31, 31, 31);
+  background: rgb(251, 206, 81);
+}
+.header__btn-link.btn-right {
+  color: rgb(31, 31, 31);
+  background: transparent;
+  transition: 0.2s linear;
+  border: 2px solid rgb(31, 31, 31);
+}
+.header__btn-link.btn-right:hover {
+  color: #ffffff;
+  background: rgb(31, 31, 31);
+}
+
+.logo {
+  display: flex;
+  margin-bottom: 62px;
+}
+.logo__img {
+  width: 92px;
+  height: 31px;
+}
+.logo__text {
+  font-size: 16px;
+  font-family: "Golos Text";
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+
+.stock-ticker {
+  font-size: 15px;
+  padding-block: 18px;
+  overflow: hidden;
+  user-select: none;
+  background: rgb(245, 73, 50);
+  color: rgb(255, 255, 255);
+  font-family: Merriweather;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  --gap: 5px;
+  display: flex;
+  gap: var(--gap);
+}
+
+.stock-ticker ul {
+  list-style: none;
+  flex-shrink: 0;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap);
+  animation: scroll 20s linear infinite;
+}
+
+.stock-ticker ul li span {
+  padding-inline: 9px;
+}
+
+.stock-ticker:hover ul {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+.tournament {
+  padding-top: 80px;
+}
+.tournament__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 64px;
+}
+.tournament__title {
+  font-family: Merriweather;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 135%;
+  letter-spacing: 0px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.tournament__title span {
+  color: #f54932;
+}
+.tournament__img-cont {
+  position: relative;
+  width: 394px;
+  height: 250px;
+}
+.tournament__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tournament-price__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.tournament-price__title {
+  font-family: Merriweather;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 135%;
+  text-align: left;
+  text-transform: uppercase;
+  color: #313131;
+  margin-bottom: 60px;
+}
+.tournament-price__title span {
+  color: #f54932;
+}
+.tournament-price__wrapper {
+  margin-left: -10px;
+  width: 704px;
+  display: flex;
+  flex-direction: column;
+}
+.tournament-price__img-cont {
+  position: relative;
+  width: 529px;
+  height: 670.2px;
+}
+.tournament-price__img {
+  position: absolute;
+  top: -49px;
+  left: -26px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.tournament-price__group {
+  display: flex;
+  margin-bottom: 41px;
+}
+.tournament-price__column {
+  font-family: Golos Text;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: left;
+}
+.tournament-price__column.price-col1 {
+  width: 306px;
+  border-right: 2px solid rgb(208, 208, 208);
+}
+.tournament-price__column.price-col2 {
+  font-weight: 600;
+}
+.tournament-price__column.price-col2 .tournament-price__column-item {
+  padding-left: 16px;
+}
+.tournament-price__column-item:not(:first-child) {
+  padding-top: 16px;
+}
+.tournament-price__column-item:not(:last-child) {
+  border-bottom: 2px solid rgb(208, 208, 208);
+  padding-bottom: 16px;
+}
+.tournament-price__column-item span {
+  text-decoration: line-through rgb(245, 73, 50);
+}
+.tournament-price__text {
+  color: rgb(48, 87, 162);
+  font-family: Golos Text;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: left;
+}
+
+.transformation {
+  padding-top: 58px;
+}
+.transformation__title-wrapper {
+  position: relative;
+  margin-bottom: 53px;
+}
+.transformation__title {
+  color: rgb(49, 49, 49);
+  font-family: Merriweather;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.transformation__title-text {
+  position: absolute;
+  bottom: 11px;
+  left: 300px;
+  z-index: 100;
+  color: rgb(48, 87, 162);
+  font-family: Golos Text;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: left;
+}
+.transformation__items-wrapper {
+  position: relative;
+}
+.transformation__img {
+  position: absolute;
+  width: 401px;
+  height: 235px;
+  bottom: -3px;
+  right: -63px;
+}
+.transformation__item-block {
+  color: rgb(49, 49, 49);
+  font-family: Golos Text;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 394px));
+  grid-template-rows: repeat(2, 112px) 136px;
+  gap: 20px;
+}
+.transformation__item {
+  position: relative;
+  display: inline-block;
+  padding: 20px 5px 20px 73px;
+  background: rgb(233, 222, 212);
+}
+.transformation__item:nth-child(3) {
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+.transformation__item:nth-child(7) {
+  grid-column: 2/4;
+  padding-right: 300px;
+}
+.transformation__item:nth-child(1)::after {
+  content: "1";
+}
+.transformation__item:nth-child(2)::after {
+  content: "2";
+}
+.transformation__item:nth-child(3)::after {
+  content: "3";
+}
+.transformation__item:nth-child(4)::after {
+  content: "4";
+}
+.transformation__item:nth-child(5)::after {
+  content: "5";
+}
+.transformation__item:nth-child(6)::after {
+  content: "6";
+}
+.transformation__item:nth-child(7)::after {
+  content: "7";
 }
